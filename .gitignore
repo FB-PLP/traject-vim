@@ -1,0 +1,6 @@
+backup/
+bundle/
+swap/
+undo/
+
+.original_vimrc
