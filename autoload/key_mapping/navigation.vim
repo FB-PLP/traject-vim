@@ -30,4 +30,4 @@ function! QuickFix_toggle()
     copen
 endfunction
 
-nnoremap <c-l> :call QuickFix_toggle()<cr>
+nnoremap <c-space> :call QuickFix_toggle()<cr>
