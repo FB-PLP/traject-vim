@@ -21,3 +21,11 @@ execute 'source '.s:project_root.'/autoload/key_mapping/navigation.vim'
 execute 'source '.s:project_root.'/autoload/theme.vim'
 execute 'source '.s:project_root.'/autoload/traject.vim'
 set mouse=a
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️ '
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}

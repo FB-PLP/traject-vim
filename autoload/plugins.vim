@@ -27,5 +27,3 @@ Plugin 'sheerun/vim-polyglot'
 
 " Support Rubocop
 Plugin 'dense-analysis/ale'
-" Support Sorbet
-"Plugin 'neoclide/coc.nvim'
