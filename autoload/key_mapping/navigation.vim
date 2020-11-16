@@ -27,5 +27,5 @@ function! QuickFix_toggle()
     copen
 endfunction
 
-nnoremap <c-space> :call QuickFix_toggle()<cr>
-nnoremap gd :ALEGoToDefinition<cr>
+nnoremap <silent><c-space> :call QuickFix_toggle()<cr>
+nnoremap <silent>gd :ALEGoToDefinition<cr>

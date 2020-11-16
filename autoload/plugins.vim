@@ -10,6 +10,9 @@ Plugin 'tpope/vim-rails'
 " vim-bundler sets the location of tags in Vim
 Plugin 'tpope/vim-bundler'
 
+" git grep
+Plugin 'tpope/vim-fugitive'
+
 "  a file system explorer
 if has('nvim')
   Plugin 'Shougo/defx.nvim'

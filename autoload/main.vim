@@ -105,3 +105,5 @@ call defx#custom#option('_', {
     \ 'toggle': 1,
     \ 'resume': 1
     \ })
+
+:command -nargs=+ GG execute 'silent Ggrep!' <q-args> | cw | redraw!
