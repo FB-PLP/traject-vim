@@ -11,11 +11,16 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 
 "  a file system explorer
-Plugin 'preservim/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+if has('nvim')
+  Plugin 'Shougo/defx.nvim'
+else
+  Plugin 'Shougo/defx.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
 
 " Lean & mean status/tabline for vim
 Plugin 'vim-airline/vim-airline'

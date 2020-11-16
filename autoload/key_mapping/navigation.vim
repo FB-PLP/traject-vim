@@ -1,21 +1,18 @@
-nnoremap <tab> gt
+" Defx as the file explorer
+nnoremap <silent> <c-n> :<C-U>:Defx -resume -buffer_name=explorer -split=vertical -vertical_preview<CR>
+nnoremap <silent><c-p> :FZF<cr>
 
-" NERDTree as the file explorer
-nnoremap <c-n> :NERDTreeTabsToggle<cr>
-nnoremap <c-b> :CtrlPBuffer<cr>
-nnoremap <c-f> :CtrlP<cr>
-nnoremap <c-t> :CtrlPTag<cr>
-
-nnoremap <c-j> <c-w>j<c-w>_
-nnoremap <c-k> <c-w>k<c-w>_
-nnoremap <c-h> <c-w>h<c-w>_
-nnoremap <c-l> <c-w>l<c-w>_
+nnoremap <silent><c-j> <c-w>j<c-w>_
+nnoremap <silent><c-k> <c-w>k<c-w>_
+nnoremap <silent><c-h> <c-w>h<c-w>_
+nnoremap <silent><c-l> <c-w>l<c-w>_
 
 "Shift + Tab to switch to previous open buffer
-nnoremap <s-tab> :bprevious!<cr>
-nnoremap <tab> :bnext!<cr>
+nnoremap <silent><s-tab> :bprevious!<cr>
+nnoremap <silent><tab> :bnext!<cr>
 
-nnoremap <c-d> :bd<cr>
+nnoremap <silent>q :bd<cr>
+
 set splitright
 
 function! QuickFix_toggle()
