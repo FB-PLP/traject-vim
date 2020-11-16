@@ -115,12 +115,17 @@ function! s:get_visual_selection()
   endif
   let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
   let lines[0] = lines[0][column_start - 1:]
-  return join(lines, "\n")
+  return '"'.join(lines, "\n").'"'
 endfunction
 
-function! s:git_grep()
-  echo s:get_visual_selection()
-  execute 'silent Ggrep!' s:get_visual_selection() | cw | redraw!
+command -nargs=+ Optional execute OptLets(<f-args>)
+
+function! s:git_grep(...)
+  if a:0 >= 1
+    execute 'silent Ggrep!' join(a:000, ' ') | cw | redraw!
+  else
+    execute 'silent Ggrep!' s:get_visual_selection() | cw | redraw!
+  endif
 endfunction
 
-:command -range GG call s:git_grep()
+:command -range -nargs=* GG call s:git_grep(<f-args>)
